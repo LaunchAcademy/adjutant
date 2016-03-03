@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'adjutant/ruby/version'
+require 'adjutant/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "adjutant-ruby"
-  spec.version       = Adjutant::Ruby::VERSION
+  spec.version       = Adjutant::VERSION
   spec.authors       = ["Dan Pickett"]
   spec.email         = ["dan.pickett@launchacademy.com"]
 
