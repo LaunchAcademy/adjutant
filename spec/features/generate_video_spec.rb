@@ -44,6 +44,6 @@ describe 'generate video' do
   end
 
   def run
-    capture(:stdout) { cli.invoke_all }
+    capture(:stdout) { cli.video }
   end
 end
