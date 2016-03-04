@@ -28,6 +28,11 @@ module Adjutant
       generate_lesson('exercise')
     end
 
+    def challenge(challenge_title = nil)
+      fundamental_asks(challenge_title)
+      generate_lesson('challenge')
+    end
+
     protected
     def generate_lesson(category)
       Adjutant::LessonGenerator.new({
