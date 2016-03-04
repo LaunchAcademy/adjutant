@@ -13,31 +13,33 @@ module Adjutant
       fundamental_asks(movie_title)
       @vimeo_id = ask('Vimeo ID: ')
 
-      Adjutant::LessonGenerator.new({
-        title: @title,
-        slug: @slug,
-        tags: @tags,
-        category: "video",
-        vimeo_id: @vimeo_id,
-        destination_root: self.destination_root
-      }).build
+      generate_lesson('video')
     end
 
     desc "article <article_title>",
       "generates an article lesson"
     def article(article_title = nil)
       fundamental_asks(article_title)
+      generate_lesson('article')
+    end
+
+    def exercise(exercise_title = nil)
+      fundamental_asks(exercise_title)
+      generate_lesson('exercise')
+    end
+
+    protected
+    def generate_lesson(category)
       Adjutant::LessonGenerator.new({
         title: @title,
         slug: @slug,
         tags: @tags,
-        category: "article",
+        category: category,
+        vimeo_id: @vimeo_id,
         destination_root: self.destination_root
       }).build
-
     end
 
-    protected
     def fundamental_asks(supplied_title = nil)
       @title = supplied_title || ask("Title:")
       @slug = ask('Slug: ', default: @title.to_url)
