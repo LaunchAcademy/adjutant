@@ -4,6 +4,9 @@ require 'thor'
 require File.join(File.dirname(__FILE__), 'lesson_generator')
 
 module Adjutant
+  # this is the CLI that the `bin` script uses
+  # for each subcommand to the `adjutant` command
+  # a method with an applicable `desc` must be added here
   class CommandLineInterface < Thor
     include Thor::Actions
 
