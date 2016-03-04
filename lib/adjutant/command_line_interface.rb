@@ -23,11 +23,15 @@ module Adjutant
       generate_lesson('article')
     end
 
+    desc "exercise <exercise>",
+      "generates an exercise lesson"
     def exercise(exercise_title = nil)
       fundamental_asks(exercise_title)
       generate_lesson('exercise')
     end
 
+    desc "challenge <challenge>",
+      "generates a challenge lesson"
     def challenge(challenge_title = nil)
       fundamental_asks(challenge_title)
       generate_lesson('challenge')
