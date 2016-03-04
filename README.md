@@ -7,7 +7,7 @@ Adjutant is a command line generator for creating new curriculum lessons. It
 generates a new lesson folder, based on a supplied title, and prompts you for
 tags and vimeo identifiers as applicable.
 
-It is intended to maek the process of writing a new lesson easier!
+It is intended to make the process of writing a new lesson easier!
 
 ## Installation
 
