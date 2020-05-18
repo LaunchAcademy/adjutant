@@ -31,6 +31,11 @@ describe 'generate article' do
     expect(has_file?("article/#{slug}/.lesson.yml")).to be(true)
   end
 
+  it 'creates a .gitignore' do
+    run
+    expect(has_file?("article/#{slug}/.gitignore")).to be(true)
+  end
+
   it 'creates an md file' do
     run
     expect(has_file?(md_path)).to be(true)

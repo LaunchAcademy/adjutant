@@ -1,3 +1,5 @@
+require("fileutils")
+
 module AdjutantSpecHelper
   def adjutant!(subcommand_with_args)
     Dir.chdir(tmp_path) do
