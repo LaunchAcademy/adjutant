@@ -33,9 +33,9 @@ describe 'generate video' do
     expect(has_file?("video/#{slug}/.lesson.yml")).to be(true)
   end
 
-  it 'creates a .gitignore' do
+  it 'creates a .etignore' do
     run
-    expect(has_file?("video/#{slug}/.gitignore")).to be(true)
+    expect(has_file?("video/#{slug}/.etignore")).to be(true)
   end
 
   it 'creates an md file' do
