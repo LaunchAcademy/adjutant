@@ -33,6 +33,11 @@ describe 'generate video' do
     expect(has_file?("video/#{slug}/.lesson.json")).to be(true)
   end
 
+  it 'creates a .etignore' do
+    run
+    expect(has_file?("video/#{slug}/.etignore")).to be(true)
+  end
+
   it 'creates an md file' do
     run
     expect(has_file?(md_path)).to be(true)

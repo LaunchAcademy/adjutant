@@ -31,6 +31,11 @@ describe 'generate article' do
     expect(has_file?("exercise/#{slug}/.lesson.json")).to be(true)
   end
 
+  it 'creates a .etignore' do
+    run
+    expect(has_file?("exercise/#{slug}/.etignore")).to be(true)
+  end
+
   it 'creates an md file' do
     run
     expect(has_file?(md_path)).to be(true)

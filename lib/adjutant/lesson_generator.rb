@@ -30,6 +30,7 @@ module Adjutant
       new_dir = "#{@category}/#{@slug}"
       empty_directory(new_dir)
       template('lesson.json.erb', File.join(new_dir, '.lesson.json'))
+      template('etignore.erb', File.join(new_dir, '.etignore'))
       template("#{@category}.md.erb", File.join(new_dir, "#{@slug}.md"))
     end
 
