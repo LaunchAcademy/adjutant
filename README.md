@@ -1,3 +1,5 @@
+![Ruby](https://github.com/LaunchAcademy/adjutant/workflows/Ruby/badge.svg)
+
 # Adjutant
 
 ![Starcraft Adjutant](http://vignette1.wikia.nocookie.net/starcraft/images/a/a4/Adjutant_SC2_Head2.jpg/revision/latest?cb=20100906202000)
