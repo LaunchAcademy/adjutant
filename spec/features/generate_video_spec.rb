@@ -28,9 +28,9 @@ describe 'generate video' do
     expect(has_dir?("video/#{slug}")).to be(true)
   end
 
-  it 'creates a .lesson.yml' do
+  it 'creates a .lesson.json' do
     run
-    expect(has_file?("video/#{slug}/.lesson.yml")).to be(true)
+    expect(has_file?("video/#{slug}/.lesson.json")).to be(true)
   end
 
   it 'creates a .etignore' do

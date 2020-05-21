@@ -26,9 +26,9 @@ describe 'generate article' do
     expect(has_dir?("exercise/#{slug}")).to be(true)
   end
 
-  it 'creates a .lesson.yml' do
+  it 'creates a .lesson.json' do
     run
-    expect(has_file?("exercise/#{slug}/.lesson.yml")).to be(true)
+    expect(has_file?("exercise/#{slug}/.lesson.json")).to be(true)
   end
 
   it 'creates a .etignore' do

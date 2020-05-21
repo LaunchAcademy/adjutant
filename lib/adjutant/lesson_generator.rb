@@ -1,6 +1,6 @@
 require 'thor'
 module Adjutant
-  # Generates the new lesson folder, with the relevant `.lesson.yml` and
+  # Generates the new lesson folder, with the relevant `.lesson.json` and
   # markdown file
   class LessonGenerator < Thor::HiddenCommand
     include Thor::Base
@@ -29,7 +29,7 @@ module Adjutant
     def build
       new_dir = "#{@category}/#{@slug}"
       empty_directory(new_dir)
-      template('lesson.yml.erb', File.join(new_dir, '.lesson.yml'))
+      template('lesson.json.erb', File.join(new_dir, '.lesson.json'))
       template('etignore.erb', File.join(new_dir, '.etignore'))
       template("#{@category}.md.erb", File.join(new_dir, "#{@slug}.md"))
     end
