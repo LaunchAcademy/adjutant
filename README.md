@@ -24,9 +24,9 @@ And then execute:
 
 ## Usage
 
-For the most part, using the `rake` tasks present in the 
+For the most part, using the `rake` tasks present in the
 [curriculum](https://github.com/launchacademy/curriculum) repo will
-suffice. 
+suffice.
 
 ```no-highlight
 rake gen:article    # generate article lesson
@@ -63,8 +63,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Templates
 
 Default templates for article, challenge, exercise, and video lesson types can
-be found in the `lib/templates` directory. There is also a `.lesson.yml.erb`
-that is used to generate the yml for the lesson.
+be found in the `lib/templates` directory. There is also a `.lesson.json.erb`
+that is used to generate the lesson metadata file for the lesson.
 
 Templates are bound to the applicable instance context of the `LessonGenerator`
 class.
